@@ -6,6 +6,13 @@ public class User {
     private String password;
     private int permissionState;
 
+    public User(String id, String username, String password, int permissionState) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.permissionState = permissionState;
+    }
+
     public String getId() {
         return id;
     }

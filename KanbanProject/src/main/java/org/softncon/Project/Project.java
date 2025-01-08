@@ -13,6 +13,55 @@ public class Project {
     private User createdBy;
     private ArrayList<Task> projectTasks;
 
+    public Project(String id, String name, User user, LocalDateTime dueDate) {
+        this.Id = id;
+        this.Name = name;
+        this.creationTime = LocalDateTime.now();
+        this.createdBy = user;
+        this.dueDate = dueDate;
+    }
 
+    public String getName() {
+        return Name;
+    }
 
+    public void setName(String name) {
+        Name = name;
+    }
+
+    public String getId() {
+        return Id;
+    }
+
+    public void setId(String id) {
+        Id = id;
+    }
+
+    public LocalDateTime getDueDate() {
+        return dueDate;
+    }
+
+    public void setDueDate(LocalDateTime dueDate) {
+        this.dueDate = dueDate;
+    }
+
+    public User getCreatedBy() {
+        return createdBy;
+    }
+
+    public void setCreatedBy(User createdBy) {
+        this.createdBy = createdBy;
+    }
+
+    public void addTask(Task task){
+        this.projectTasks.add(task);
+    }
+
+    public void removeTask(Task task){
+
+    }
+
+    public ArrayList<Task> listTasks(){
+        return this.projectTasks;
+    }
 }

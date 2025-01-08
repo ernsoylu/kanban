@@ -3,6 +3,7 @@ import org.softncon.Task.Task;
 import org.softncon.User.User;
 
 import java.time.*;
+import java.util.ArrayList;
 
 public class Project {
     private String Name;
@@ -10,7 +11,7 @@ public class Project {
     private LocalDateTime creationTime;
     private LocalDateTime dueDate;
     private User createdBy;
-    private Task[] projectTasks;
+    private ArrayList<Task> projectTasks;
 
 
 

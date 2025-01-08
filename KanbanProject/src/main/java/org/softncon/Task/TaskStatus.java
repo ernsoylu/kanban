@@ -1,9 +1,11 @@
 package org.softncon.Task;
 
+import java.util.ArrayList;
+
 public class TaskStatus {
     private int Id;
     private String TaskStatusName;
-    private String[] TaskStatusList;
+    private ArrayList<String> TaskStatusList;
 
     public int getId() {
         return Id;
@@ -21,11 +23,15 @@ public class TaskStatus {
         TaskStatusName = taskStatusName;
     }
 
-    public String[] getTaskStatusList() {
+    public void addStatusDefinition(String StatusName){
+        TaskStatusList.add(StatusName);
+    }
+
+    public ArrayList<String> getTaskStatusList() {
         return TaskStatusList;
     }
 
-    public void setTaskStatusList(String[] taskStatusList) {
+    public void setTaskStatusList(ArrayList<String> taskStatusList) {
         TaskStatusList = taskStatusList;
     }
 }
